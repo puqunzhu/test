@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div v-if="seen">我被显示了</div>
+		<div :id="id">id的值为{{id}}</div>
+		<img v-bind:src="imgs" alt="">
+	</div>
+</body>
+<script>
+	let data = {
+		msg:"hello puqunzhu",
+		seen:true,
+		imgs:'https://cn.vuejs.org/images/logo.png',
+		id:800
+	}
+
+	let vm = new Vue({
+		el:'#app',
+		data: data
+	})
+</script>
+</html>
